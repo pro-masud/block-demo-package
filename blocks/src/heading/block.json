@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gb-addons/heading",
+  "title": "GB Heading",
+  "category": "text",
+  "icon": "editor-textcolor",
+  "description": "A customizable heading block.",
+  "keywords": ["heading", "title", "text"],
+  "textdomain": "gb-addons",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Heading Text"
+    },
+    "level": {
+      "type": "number",
+      "default": 2
+    },
+    "align": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "supports": {
+    "align": ["left", "center", "right"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.scss",
+  "style": "file:./style-index.scss",
+  "render": "file:./render.php"
+}

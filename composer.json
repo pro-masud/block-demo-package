@@ -1,0 +1,22 @@
+{
+    "name": "promasud/demo-block",
+    "description": "A custom block for wordpress",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-only",
+    "autoload": {
+        "psr-4": {
+            "Promasud\\DemoBlock\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pro-masud",
+            "email": "promasudbd@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"php": ">=8.0"
+	},
+	"require-dev": {}
+}

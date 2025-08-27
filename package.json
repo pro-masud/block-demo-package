@@ -1,0 +1,44 @@
+{
+  "name": "demo-block",
+  "version": "1.0.0",
+  "description": "A custom block for wordpress",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "block:start": "wp-scripts start --blocks-manifest --webpack-src-dir=./blocks/src --output-path=blocks/build",
+    "block:build": "wp-scripts build --blocks-manifest --webpack-src-dir=./blocks/src --output-path=blocks/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo-url"
+  },
+  "keywords": [
+    "wordpress-plugin"
+  ],
+  "author": {
+    "name": "Masud Rana",
+    "email": "promasudbd@gmail.com"
+  },
+  "license": "GPL-2.0-only",
+  "browserslist": [
+    "last 2 version",
+    ">0.2%"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^30.22.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.91.0",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}
