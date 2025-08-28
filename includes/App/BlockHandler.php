@@ -12,19 +12,22 @@ class BlockHandler {
 	}
 
 	public function register_blocks() {
-		// $block_files = require DEMO_ADDONS_PATH . 'blocks/build/blocks-manifest.php';
 
-		// foreach ( array_keys( $block_files ) as $block_type ) {
-		// 	register_block_type( DEMO_ADDONS_PATH . "blocks/build/${$block_type}");
-		// }
+		if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
+			wp_register_block_types_from_metadata_collection( DEMO_ADDONS_PATH . 'blocks/build', DEMO_ADDONS_PATH . 'blocks/build/blocks-manifest.php' );
+
+			return;
+		}
+
+		if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
+			wp_register_block_metadata_collection( DEMO_ADDONS_PATH . 'blocks/build', DEMO_ADDONS_PATH . 'blocks/build/blocks-manifest.php' );
+		}
 
 		$block_files = require DEMO_ADDONS_PATH . 'blocks/build/blocks-manifest.php';
-		// echo "<pre>";
-		// var_dump($block_files); // Debugging line to check the contents of $block_files
-		// echo "</pre>";
-
+		if ( ! empty( $block_files ) ) {
 			foreach ( array_keys( $block_files ) as $block_config ) {
-				register_block_type( DEMO_ADDONS_PATH . "blocks/build/{$block_config}");
+				register_block_type( DEMO_ADDONS_PATH . "blocks/build/{$block_config}" );
 			}
+		}
 	}
 }

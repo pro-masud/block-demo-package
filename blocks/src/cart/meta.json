@@ -1,0 +1,8 @@
+{
+	"name": "GB Heading",
+	"description": "A block for adding styled headings.",
+	"author": "Your Name",
+	"version": "1.0.0",
+	"license": "GPL-2.0-or-later",
+	"textdomain": "demo-block"
+}

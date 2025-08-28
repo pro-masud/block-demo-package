@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gb-addons/cart",
+  "title": "GB Cart",
+  "category": "text",
+  "icon": "editor-textcolor",
+  "description": "A customizable heading block.",
+  "keywords": ["cart", "title", "text"],
+  "textdomain": "gb-addons",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Card title"
+    },
+    "description": {
+      "type": "string",
+      "default": " This is a short description to illustrate the card content. It should be concise and helpful."
+    },
+    "badge": {
+      "type": "string",
+      "default": "New"
+    },
+    "price": {
+      "type": "string",
+      "default": "$29"
+    },
+    "btnPrimary": {
+      "type": "string",
+      "default": "Primary"
+    },
+    "btnPrimaryUrl": {
+      "type": "string",
+      "default": "Primary"
+    },
+    "btnOutline": {
+      "type": "string",
+      "default": "Details"
+    },
+    "btnOutlineUrl": {
+      "type": "string",
+      "default": "outline"
+    }
+  },
+  "supports": {
+    "align": ["left", "center", "right"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css",
+  "render": "file:./render.php"
+}
